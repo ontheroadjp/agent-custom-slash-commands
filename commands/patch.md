@@ -64,8 +64,9 @@ git checkout -b patch/<変更内容を表す slug>
 - 変更を実施する（ユーザー確認不要）
 - コミットは複数回でも可。メッセージは作業内容を明示する:
     ```bash
-    git commit -m "patch: <変更内容の簡潔な説明>"
+    git commit -m "<type>: <short description in English>"
     ```
+    Use Conventional Commits types: `fix` / `refactor` / `chore` / `style` / `test` / `docs`
 
 ---
 
