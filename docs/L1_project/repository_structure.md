@@ -47,6 +47,12 @@ agent-custom-slash-commands/
 - `L3`: 実装仕様サマリ（コマンド別仕様要約）
 - 根拠: `init-docs.md:98-113`（Phase 3 ドキュメント生成定義）
 
+### `hooks/`
+Claude Code の Stop hook スクリプト群。セッション終了時に自動実行される。
+- `log-token-usage.sh`: JSONL トランスクリプトから全ターンの token usage を集計し `~/.claude/token-usage.log` に追記する
+- `~/.claude/hooks/` へのシンボリックリンクでデプロイされる
+- 根拠: `hooks/log-token-usage.sh`, `~/.claude/settings.json:hooks.Stop`
+
 ### `templates/`
 issue・PR 本文のテンプレートファイル群。コマンドから `~/.claude/commands/templates/` として参照される。
 - 根拠: `task.md:129`, `task.md:197`, `patch.md:103`
