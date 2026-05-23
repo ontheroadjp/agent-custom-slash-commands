@@ -1,25 +1,25 @@
-# issue テンプレート
+# Issue Template
 
-<!-- このテンプレートは task.md および patch.md のエスカレーション時に使用する -->
-<!-- [] 内を実際の内容で埋め、不要な行は削除する -->
+<!-- Used by task.md (Step 0) and patch.md (escalation) -->
+<!-- Fill in the [ ] placeholders; remove lines that don't apply -->
 
-## 概要
-[何を・なぜ変更するかを1〜2文で]
+## Overview
+[What and why — 1–2 sentences]
 
-## 背景・理由
-[なぜこの変更が必要か。課題・経緯・制約など]
+## Background
+[Why this change is needed: problem, context, constraints]
 
-## 作業スコープ（初期見積もり）
-[何を変更するか。調査前の時点での範囲感]
+## Scope (initial estimate)
+[What will be changed, before investigation]
 
-## 完了条件
-[どうなれば完了か。できるだけ検証可能な形で]
+## Done Criteria
+[How we know it's complete — make it verifiable]
 
 ---
-<!-- patch → task エスカレーション時のみ以下を追記 -->
+<!-- Add the following only when escalating from patch → task -->
 
-## /patch で実施済みの変更
-[エスカレーション前にコミット済みの変更内容]
+## Changes Already Made in /patch
+[What was committed before escalation]
 
-## 追加スコープ（エスカレーション理由）
-[ドキュメント変更が必要になった理由と範囲]
+## Additional Scope (escalation reason)
+[Why docs changes turned out to be necessary]

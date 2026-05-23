@@ -66,8 +66,9 @@ Phase 3: 最終報告
     ```
 2. 変更を実施する（ユーザー確認不要）。コミットは複数回でも可:
     ```bash
-    git commit -m "patch: <変更内容の簡潔な説明>"
+    git commit -m "<type>: <short description in English>"
     ```
+    Use Conventional Commits types: `fix` / `refactor` / `chore` / `style` / `test` / `docs`
 3. 実行中にドキュメント変更が必要と判明した場合（エスカレーション）:
     - 現時点の変更をコミットする
     - ユーザーに報告: 「ドキュメント変更が必要なため task フローに切り替えます」
@@ -177,8 +178,9 @@ Phase 3: 最終報告
         - Step 2（必要に応じて Step 1）へ戻る
         - ゲートは通過済みの前提で作業を続ける
     - ユーザーから OK が出た場合:
-        - WIP コミット: `git commit -m "[/task:wip] #<issue番号> <実装内容の要約>"`
-            - 例: `[/task:wip] #23 ユーザー認証エンドポイントの実装`
+        - WIP commit: `git commit -m "[/task:wip] <type>(#<issue number>): <short description in English>"`
+            - Example: `[/task:wip] feat(#23): implement user auth endpoint`
+            - Conventional Commits types: `feat` / `fix` / `refactor` / `chore` / `style` / `test` / `docs`
         - 作業内容を対象 issue のコメントとして投稿する
         - Phase 2 へ進む
 
@@ -197,7 +199,7 @@ Phase 3: 最終報告
 - `~/.claude/commands/templates/pr.md` をもとに PR 本文を作成する
 - PR はドラフトとして作成する。本文は `--body-file -` で標準入力から渡す:
     ```bash
-    gh pr create --draft --title "#<issue番号> <PR タイトル>" --body-file - <<'EOF'
+    gh pr create --draft --title "#<issue number> <PR title in English>" --body-file - <<'EOF'
     [~/.claude/commands/templates/pr.md の内容を実際の値で埋めたものを展開]
     EOF
     ```

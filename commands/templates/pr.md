@@ -1,31 +1,32 @@
-# PR テンプレート（ドラフト）
+# PR Template (Draft)
 
-<!-- このテンプレートは task.md の Phase 2 で使用する -->
-<!-- [] 内を実際の内容で埋める -->
+<!-- Used by task.md Phase 2 -->
+<!-- Fill in the [ ] placeholders -->
 
-Closes #[issue番号]
+Closes #[issue number]
 
-## 実装サマリ
+## Summary
 
-### 変更ファイルと内容
-<!-- 変更ファイルごとに「何を・なぜ変えたか」を記述 -->
-- `[ファイルパス]`: [変更内容と理由]
+### Changed Files
+<!-- For each file: what was changed and why -->
+- `[file path]`: [what and why]
 
-### 変更の種別
-- [ ] 新機能
-- [ ] バグ修正
-- [ ] リファクタリング
-- [ ] 設定変更
-- [ ] テスト
-- [ ] その他
+### Change Type
+- [ ] feat (new feature)
+- [ ] fix (bug fix)
+- [ ] refactor
+- [ ] chore (config/build/tooling)
+- [ ] docs
+- [ ] test
+- [ ] other
 
-### /docs-sync への引き継ぎ事項
-<!-- git diff から読み取れないコンテキストのみ記述する -->
-<!-- ファイル変更・API差分・設定値の変更は git diff で分かるため書かない -->
-- 設計上の意図・背景: [なぜこの変更をしたか。なければ「なし」]
-- git diff に現れない影響: [環境変数・外部サービス・手動設定・インフラ等。なければ「なし」]
-- docs-sync が誤解する可能性がある点: [注意点。なければ「なし」]
-- 特に注意して更新してほしい docs の箇所: [具体的なファイルや箇所。なければ「なし」]
+### Handoff Notes for /docs-sync
+<!-- Only include context that cannot be inferred from git diff -->
+<!-- File changes, API diffs, and config values are visible in git diff — omit those -->
+- Design intent / background: [why this change was made; "none" if obvious]
+- Side effects not visible in git diff: [env vars, external services, manual steps, infra; "none" if N/A]
+- Potential misreads by docs-sync: [anything that could be misinterpreted; "none" if N/A]
+- Specific docs sections to update: [file or section names; "none" if N/A]
 
-## 留意点
-[レビュアーへの補足。なければ「なし」]
+## Notes for Reviewers
+[Anything reviewers should know; "none" if N/A]

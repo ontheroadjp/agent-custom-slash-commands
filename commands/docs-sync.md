@@ -102,7 +102,7 @@
 - 作業プランに従って docs/* の最小更新を行う
 - 作業プラン外の変更は絶対に行わない
 - 完了後、更新内容をユーザーに報告する
-- コミット: `git commit -m "[/docs-sync] docs updated"`
+- コミット: `git commit -m "docs: sync documentation"`
 
 ---
 
