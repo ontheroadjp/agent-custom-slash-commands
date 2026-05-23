@@ -1,5 +1,5 @@
 {
-  "repo_id": "agent-custom-slash-commands",
+  "repo_id": "claude-code-kit",
   "package_manager": "unknown",
   "doc_roots": [
     "docs/L1_project",
@@ -8,18 +8,34 @@
   ],
   "commands": {},
   "active_commands": [
-    "task.md",
-    "patch.md",
-    "docs-sync.md",
-    "init-docs.md"
+    "commands/task.md",
+    "commands/patch.md",
+    "commands/docs-sync.md",
+    "commands/init-docs.md"
   ],
   "templates": [
-    "templates/issue.md",
-    "templates/pr.md"
+    "commands/templates/issue.md",
+    "commands/templates/pr.md"
   ],
-  "external_cli_deps": ["git", "gh"],
+  "hooks": [
+    "hooks/log-token-usage.sh"
+  ],
+  "external_cli_deps": ["git", "gh", "jq"],
   "deploy": {
-    "method": "symlink",
-    "target": "~/.claude/commands/"
+    "commands": {
+      "method": "symlink",
+      "source": "commands/",
+      "target": "~/.claude/commands/"
+    },
+    "hooks": {
+      "method": "symlink",
+      "source": "hooks/",
+      "target": "~/.claude/hooks/"
+    },
+    "claude_md": {
+      "method": "symlink",
+      "source": "CLAUDE.md",
+      "target": "~/.claude/CLAUDE.md"
+    }
   }
 }

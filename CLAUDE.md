@@ -50,6 +50,6 @@ Claude Code 向けのカスタムスラッシュコマンド仕様（Markdown）
 ## このリポジトリへの変更作業
 
 このリポジトリ自体を変更する場合も `/task` を呼ぶ。ただし:
-- run/build/test コマンドは存在しない（Markdown のみ）
+- run/build/test コマンドは存在しない（Markdown + Bash のみ）
 - 変更後は `docs/` の更新が必要になることが多い（/docs-sync を呼ぶ）
 - シンボリックリンクは自動更新される（リンク先の実体を変更するだけでよい）
