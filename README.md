@@ -27,7 +27,7 @@ A collection of custom slash commands for [Claude Code](https://claude.ai/code) 
 
 ## Installation
 
-Symlink the commands into Claude Code's global commands directory:
+### 1. Symlink the commands (global — all repos)
 
 ```bash
 ln -s /path/to/claude-code-kit/commands/task.md       ~/.claude/commands/task.md
@@ -37,7 +37,15 @@ ln -s /path/to/claude-code-kit/commands/init-docs.md  ~/.claude/commands/init-do
 ln -s /path/to/claude-code-kit/commands/templates     ~/.claude/commands/templates
 ```
 
-After symlinking, the commands are available globally in any Claude Code session as `/task`, `/patch`, `/docs-sync`, and `/init-docs`.
+The commands are now available as `/task`, `/patch`, `/docs-sync`, and `/init-docs` in any Claude Code session.
+
+### 2. Symlink CLAUDE.md (global — all repos)
+
+```bash
+ln -s /path/to/claude-code-kit/CLAUDE.md ~/.claude/CLAUDE.md
+```
+
+Claude Code auto-loads `~/.claude/CLAUDE.md` in every session, so the AI operating instructions apply to all repositories automatically. If a repo needs different instructions, place a local `CLAUDE.md` in its root — local takes precedence over global.
 
 ## Repository Structure
 
