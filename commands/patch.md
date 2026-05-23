@@ -111,6 +111,7 @@ Phase 2 の実行中に以下のいずれかになった場合、/task に引き
 2. ユーザーに報告: 「ドキュメント変更が必要なため /task に切り替えます」
 3. `~/.config/claude-code-kit/templates/issue.md` をもとに issue のドラフトを作成する
     - 「/patch で実施済みの変更」と「追加スコープ（エスカレーション理由）」を必ず記載する
+    - **issue のタイトル・本文は英語で記述する**
     - ユーザーに確認を取り、`gh issue create` で作成する
 4. /task の Phase 1 Step 2（プラン策定）から継続する
     - ブランチは再利用する（`patch/<slug>` のまま進む）

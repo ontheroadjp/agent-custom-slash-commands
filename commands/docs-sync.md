@@ -134,10 +134,10 @@ current_body=$(gh pr view --json body -q .body)
 # 追記内容を末尾に結合して PATCH する
 new_body="${current_body}
 
-## Docs 同期結果
-- 更新ファイル: [一覧]
-- 根拠: git diff main...HEAD を事実として採用、PR 引き継ぎ事項を補助参照
-- HARD STOP: なし / あり（詳細）"
+## Docs Sync Result
+- Updated files: [list]
+- Basis: git diff main...HEAD adopted as fact, PR handoff notes referenced as supplement
+- HARD STOP: none / yes (details)"
 
 gh api repos/{owner}/{repo}/pulls/{number} \
   --method PATCH \

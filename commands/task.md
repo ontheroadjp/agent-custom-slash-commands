@@ -67,6 +67,7 @@ Phase 3: 最終報告
 - ユーザーに報告: 「ドキュメント変更が必要なため task フローに切り替えます」
 - `~/.config/claude-code-kit/templates/issue.md` をもとに issue ドラフトを作成してユーザーに確認・作成する
     - 「patch で実施済みの変更」と「追加スコープ」を必ず記載する
+    - **issue のタイトル・本文は英語で記述する**
 - Phase 1 Step 0 を「エスカレーション」モードで実行する（issue 番号を引き継ぐ）
 - ブランチはそのまま再利用し、Step 1 はスキップして Step 2（プラン策定）から継続する
 
@@ -112,6 +113,7 @@ Phase 3: 最終報告
 
 - issue 番号が伝えられていない場合:
     - `~/.config/claude-code-kit/templates/issue.md` をもとに issue のドラフトを作成してユーザーに提示する
+    - **issue のタイトル・本文は英語で記述する**
     - ユーザーの OK が出たら `gh issue create` で作成する
     - 作成した issue 番号を以降の起点とする
 
@@ -187,6 +189,7 @@ Phase 3: 最終報告
 #### Step 1. ドラフト PR 作成
 
 - `~/.config/claude-code-kit/templates/pr.md` をもとに PR 本文を作成する
+- **PR のタイトル・本文は英語で記述する**
 - PR はドラフトとして作成する。本文は `--body-file -` で標準入力から渡す:
     ```bash
     gh pr create --draft --title "#<issue number> <PR title in English>" --body-file - <<'EOF'
