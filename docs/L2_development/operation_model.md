@@ -79,11 +79,14 @@
 mkdir -p ~/.config/claude-code-kit
 ln -s <repo>/commands/templates ~/.config/claude-code-kit/templates
 
-# commands（Claude Code）
+# commands（Claude Code — slash command として使用）
 ln -s <repo>/commands/task.md       ~/.claude/commands/task.md
 ln -s <repo>/commands/patch.md      ~/.claude/commands/patch.md
 ln -s <repo>/commands/docs-sync.md  ~/.claude/commands/docs-sync.md
 ln -s <repo>/commands/init-docs.md  ~/.claude/commands/init-docs.md
+
+# skills（Codex 向け — ~/.claude/skills/ への symlink は不要）
+# Codex はリポジトリ内の skills/ を直接参照する
 
 # CLAUDE.md（全セッション自動ロード）
 ln -s <repo>/CLAUDE.md              ~/.claude/CLAUDE.md
