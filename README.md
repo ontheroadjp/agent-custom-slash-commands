@@ -118,6 +118,8 @@ commands/
     issue.md       # GitHub issue template
     pr.md          # Pull request template
     readme.md      # README.md scaffold template
+partials/
+  git-commit.md    # Shared commit procedure — Read by commands/* at commit time (not a slash command)
 docs/
   .ai/
     repo.profile.json       # Machine-readable repo profile
