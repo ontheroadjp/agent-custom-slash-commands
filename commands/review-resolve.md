@@ -22,7 +22,19 @@ gh pr view <PR番号> --json number,url,title,headRefName
 ```
 
 - PR が存在しない場合: 「PR #<番号> が見つかりません」と報告して終了する
-- PR が存在する場合: タイトル・URL・ブランチ名（headRefName）を記録して Step 2 へ進む
+- PR が存在する場合: タイトル・URL・ブランチ名（headRefName）を記録して Step 1.5 へ進む
+
+---
+
+## Step 1.5: PR ブランチの取得・切り替え
+
+```bash
+git fetch origin <headRefName>
+git checkout <headRefName>
+```
+
+- checkout に失敗した場合: 「ブランチ '<headRefName>' への切り替えに失敗しました。リモートに存在するか確認してください」と報告して終了する
+- 成功した場合: Step 2 へ進む
 
 ---
 
@@ -49,7 +61,7 @@ gh api repos/{owner}/{repo}/pulls/<PR番号>/reviews \
 両方が空（コメントなし）の場合:
 - 「PR #<番号> にレビューコメントはありません」と報告して終了する
 
-コメントが存在する場合: Step 2 完了後に `git checkout <headRefName>` を実行して PR ブランチに移動する。
+コメントが存在する場合: Step 3 へ進む。
 
 ---
 
